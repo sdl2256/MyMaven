@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.mine.dll.jni.*" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.sun.mine.dll.jni.*" %>
 
 <body>
     Current time: <%= new java.util.Date() %>
