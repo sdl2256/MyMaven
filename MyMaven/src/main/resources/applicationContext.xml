@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myHome1" class="com.sun.entity.Home" abstract="false"
+          lazy-init="default">
+        <property name="homeAddr">
+            <value>wuhan</value>
+        </property>
+    </bean>
+    <bean id="myHome2" class="com.sun.entity.Home" abstract="false"
+          lazy-init="default">
+        <property name="homeAddr">
+            <value>shanghai</value>
+        </property>
+    </bean>
+
+    <!-- autowire 选择 byName时，按照Bean id 是否和类中的属性名来查找  -->
+    <!-- autowire 选择 byType时，按照 类的类型 来查找 -->
+    <bean id="userid" class="com.sun.entity.User" abstract="false"
+          lazy-init="default">
+        <property name="username">
+            <value>haiyang</value>
+        </property>
+        <property name="age">
+            <value>22</value>
+        </property>
+
+        <!-- 数组注入方式 -->
+        <property name="homes">
+            <list>
+                <ref bean="myHome1"/>
+                <ref bean="myHome2"/>
+            </list>
+        </property>
+        <!-- List注入方式 -->
+        <property name="homesList">
+            <list>
+                <ref bean="myHome1"/>
+                <ref bean="myHome2"/>
+                <value>haha</value>
+
+            </list>
+        </property>
+        <!-- Set注入方式 -->
+        <property name="homesSet">
+            <set>
+                <value>hello</value>
+                <ref bean="myHome2"/>
+                <ref bean="myHome1"/>
+            </set>
+        </property>
+        <!-- Map注入方式 -->
+        <property name="homesMap">
+            <map>
+                <entry key="1">
+                    <ref bean="myHome1"/>
+                </entry>
+                <entry key="2">
+                    <ref bean="myHome2"/>
+                </entry>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>
