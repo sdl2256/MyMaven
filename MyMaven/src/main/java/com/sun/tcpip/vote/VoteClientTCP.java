@@ -39,12 +39,12 @@ public class VoteClientTCP {
         encodedMsg = coder.toWire(msg);
         System.out.println("Sending Vote (" + encodedMsg.length + " bytes): ");
         framer.frameMsg(encodedMsg, out);
-        // Receive inquiry response
+        // Receiver inquiry response
         encodedMsg = framer.nextMsg();
         msg = coder.fromWire(encodedMsg);
         System.out.println("Received Response (" + encodedMsg.length + " bytes): ");
         System.out.println(msg);
-        // Receive vote response
+        // Receiver vote response
         msg = coder.fromWire(framer.nextMsg());
         System.out.println("Received Response (" + encodedMsg.length + " bytes): ");
         System.out.println(msg);

@@ -15,7 +15,7 @@ public class VoteServerUDP {
             throw new IllegalArgumentException("Parameter(s): <Port>");
         }
         int port = Integer.parseInt(args[0]); // Receiving Port
-        DatagramSocket sock = new DatagramSocket(port); // Receive socket
+        DatagramSocket sock = new DatagramSocket(port); // Receiver socket
         byte[] inBuffer = new byte[VoteMsgTextCoder.MAX_WIRE_LENGTH];
         // Change Bin to Text for a different coding approach
         VoteMsgCoder coder = new VoteMsgTextCoder();

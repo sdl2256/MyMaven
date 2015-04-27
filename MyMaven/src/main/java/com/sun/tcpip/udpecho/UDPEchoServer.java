@@ -20,7 +20,7 @@ public class UDPEchoServer {
         DatagramPacket packet = new DatagramPacket(new byte[ECHOMAX], ECHOMAX);
 
         while (true) { // Run forever, receiving and echoing datagrams
-            socket.receive(packet); // Receive packet from client
+            socket.receive(packet); // Receiver packet from client
             System.out.println("Handling client at " + packet.getAddress().getHostAddress()
                     + " on port " + packet.getPort());
 

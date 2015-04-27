@@ -1,5 +1,7 @@
 package com.sun.piped;
 
+import com.sun.serializable.Person;
+
 import java.io.IOException;
 import java.io.PipedOutputStream;
 

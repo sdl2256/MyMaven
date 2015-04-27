@@ -27,8 +27,8 @@ public class EchoProtocol implements Runnable{
             OutputStream out = clntSock.getOutputStream();
             int recvMsgSize; // Size of received message
             int totalBytesEchoed = 0; // Bytes received from client
-            byte[] echoBuffer = new byte[BUFSIZE]; // Receive Buffer
-            // Receive until client closes connection, indicated by -1
+            byte[] echoBuffer = new byte[BUFSIZE]; // Receiver Buffer
+            // Receiver until client closes connection, indicated by -1
             while ((recvMsgSize = in.read(echoBuffer)) != -1) {
                 out.write(echoBuffer, 0, recvMsgSize);
                 totalBytesEchoed += recvMsgSize;

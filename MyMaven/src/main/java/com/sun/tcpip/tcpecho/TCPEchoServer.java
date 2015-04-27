@@ -20,7 +20,7 @@ public class TCPEchoServer {
         ServerSocket servSock = new ServerSocket(servPort);
 
         int recvMsgSize;   // Size of received message
-        byte[] byteBuffer = new byte[BUFSIZE];  // Receive buffer
+        byte[] byteBuffer = new byte[BUFSIZE];  // Receiver buffer
 
         for (;;) { // Run forever, accepting and servicing connections
             Socket clntSock = servSock.accept();     // Get client connection
@@ -32,7 +32,7 @@ public class TCPEchoServer {
             InputStream in = clntSock.getInputStream();
             OutputStream out = clntSock.getOutputStream();
 
-            // Receive until client closes connection, indicated by -1 return
+            // Receiver until client closes connection, indicated by -1 return
             while ((recvMsgSize = in.read(byteBuffer)) != -1)
                 out.write(byteBuffer, 0, recvMsgSize);
 

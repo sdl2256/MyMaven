@@ -25,7 +25,7 @@ public class ReadFileThread extends Thread {
         processPoiDataListeners.setThreadName(this.getName());
         readFile.setReaderListener(processPoiDataListeners);
         readFile.setEncode(processPoiDataListeners.getEncode());
-        //readFile.addObserver();
+        //ReadFile.addObserver();
         try {
             readFile.readFileByLine(filePath, start, end + 1);
         } catch (Exception e) {

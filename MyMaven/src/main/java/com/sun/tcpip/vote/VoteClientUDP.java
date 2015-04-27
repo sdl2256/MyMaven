@@ -35,7 +35,7 @@ public class VoteClientUDP {
 
         DatagramPacket message = new DatagramPacket(encodedVote, encodedVote.length);
         sock.send(message);
-        // Receive response
+        // Receiver response
         message = new DatagramPacket(new byte[VoteMsgTextCoder.MAX_WIRE_LENGTH],
                 VoteMsgTextCoder.MAX_WIRE_LENGTH);
         sock.receive(message);

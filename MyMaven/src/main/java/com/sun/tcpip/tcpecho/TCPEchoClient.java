@@ -33,7 +33,7 @@ public class TCPEchoClient {
 
         out.write(data); //Send the encoded string to the server
 
-        //Receive the same string back from server
+        //Receiver the same string back from server
         int totalBytesRcvd = 0; //Total bytes received so far
         int bytesRcvd;          //Bytes received in last read
         while (totalBytesRcvd < data.length) {
