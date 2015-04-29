@@ -1,7 +1,7 @@
 package com.sun.util;
 
 import com.alibaba.fastjson.JSON;
-import com.shipxy.SShipInfo;
+import com.sun.shipxy.SShipInfo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
