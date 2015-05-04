@@ -1,6 +1,7 @@
 package com.sun.mine.dll.jni;
 
 public class TestDll {
+    /*
     static {
         System.load("C:\\Test2\\testdll.dll");
     }
@@ -14,4 +15,5 @@ public class TestDll {
         d.set(10);
         System.out.println(d.get());
     }
+    */
 }

@@ -7,11 +7,11 @@
 //        System.out.println(System.getProperty( "java.library.path"));
 //        HelloWorld helloWorld = new HelloWorld();
 //        helloWorld.SayHello("");
-        TestDll d = new TestDll();
-        d.set(30);
-        System.out.println(d.get());
+//        TestDll d = new TestDll();
+//        d.set(30);
+//        System.out.println(d.get());
     %>
-    <%= d.get() %>
+    <%--<%= d.get() %>--%>
     <%--<%--%>
         <%--System.out.println(System.getProperty( "java.library.path"));--%>
         <%--HelloWorld hello = new HelloWorld();--%>
