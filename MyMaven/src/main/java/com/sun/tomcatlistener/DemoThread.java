@@ -15,7 +15,7 @@ public class DemoThread implements Runnable {
         System.out.println("DemoThread Begins.");
         while (true) {
             readFromMsgQueue();
-            System.out.println("DemoThread is running.");
+//            System.out.println("DemoThread is running.");
         }
 
     }
