@@ -105,14 +105,42 @@
     <%--border: solid 1px #c3c3c3;--%>
     <%--}--%>
     <%--</style>--%>
+    <script>
+        var jq = $.noConflict();
+        jq(document).ready(function () {
+            jq("button").click(function () {
+                jq("p").text("jQuery 仍在运行！");
+            });
+        });
+    </script>
+    <script>
+        $.noConflict();
+        jQuery(document).ready(function ($) {
+            $("button").click(function () {
+                $("p").text("jQuery 仍在运行！");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#b01").click(function(){
+                htmlobj=$.ajax({url:"/jquery/test1.txt",async:false});
+                $("#myDiv").html(htmlobj.responseText);
+            });
+        });
+    </script>
 </head>
 <body>
+
+<div id="myDiv"><h2>通过 AJAX 改变文本</h2></div>
+<button id="b01" type="button">改变内容</button>
 
 <p>This is a paragraph.</p>
 <button onclick="appendText()">追加文本</button>
 
 <h2>This is a heading</h2>
 <big>city</big>
+
 <p>This is a paragraph.</p>
 
 <p>This is another paragraph.</p>
