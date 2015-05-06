@@ -27,6 +27,17 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.22" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcmail-jdk14:1.38" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk14:1.38" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bctsp-jdk14:1.38" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itext-asian:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.lowagie:itext-rtf:2.1.7" level="project" />
+    <orderEntry type="library" name="Maven: bouncycastle:bcmail-jdk14:138" level="project" />
+    <orderEntry type="library" name="Maven: bouncycastle:bcprov-jdk14:138" level="project" />
+    <orderEntry type="library" name="Maven: jexcelapi:jxl:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.jexcelapi:jxl:2.6.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
