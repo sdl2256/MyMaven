@@ -6,7 +6,10 @@ package com.sun.spring.chapter3;
 public class CircleA {
     private CircleB circleB;
     public CircleA() {
+
     }
+
+
     public CircleA(CircleB circleB) {
         this.circleB = circleB;
     }

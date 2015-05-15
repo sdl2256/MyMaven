@@ -1,15 +1,17 @@
 package com.sun.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by SDL on 2015/2/11.
  */
 public class JavaTest {
 
     //动态密码钥匙，加密解密参数
-    protected String key="100110100010100010001001";
+    protected String key = "100110100010100010001001";
 
-    public static void main(String[] args )
-    {
+    public static void main(String[] args) {
         /*
         Date date = new Date(0);
         System.out.println("new Date(0) ="+ date);
@@ -30,11 +32,11 @@ public class JavaTest {
      * 加密
      */
     protected String enCrypt(String str) {
-        if(str == null) return null;
+        if (str == null) return null;
         StringBuffer ret = new StringBuffer();
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
 //            System.out.println("key的长度：" + key.length());
-            int k = new Integer(key.substring(i%key.length(),i%key.length() + 1));
+            int k = new Integer(key.substring(i % key.length(), i % key.length() + 1));
             char c = str.charAt(i);
             char dc = (char) (c + k);
             ret.append(dc);
@@ -47,16 +49,24 @@ public class JavaTest {
      * 取消加密
      */
     protected String deCrypt(String str) {
-        if(str == null) return null;
+        if (str == null) return null;
         StringBuffer ret = new StringBuffer();
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            int k = new Integer(key.substring(i%key.length(),i%key.length() + 1));
-            if(c < 32 || c > 123) k = 0;
+            int k = new Integer(key.substring(i % key.length(), i % key.length() + 1));
+            if (c < 32 || c > 123) k = 0;
             char dc = (char) (c - k);
             ret.append(dc);
         }
         return ret.toString();
+    }
+
+    public void testSwitch(String str) {
+        List<String> lis = new ArrayList<String>();
+        lis.add("string1");
+        lis.add("string2");
+        lis.add("string3");
+        lis.add("string4");
     }
 }
 

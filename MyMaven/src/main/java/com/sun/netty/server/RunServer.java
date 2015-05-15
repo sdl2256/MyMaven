@@ -1,6 +1,7 @@
 package com.sun.netty.server;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.net.NetworkInterface;
@@ -10,9 +11,9 @@ import java.net.NetworkInterface;
  */
 public class RunServer {
     public static void main(String[] args) {
-        String contextFile = "F:\\ideaTestspace\\MyMaven\\MyMaven\\src\\main\\resources\\applicationContext.xml";
+        String contextFile = "applicationContext.xml";
         ApplicationContext context = null;
-        context = new FileSystemXmlApplicationContext(contextFile);
+        context = new ClassPathXmlApplicationContext(contextFile);
         final NettyServer server = (NettyServer) context.getBean("nettyServer");
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
