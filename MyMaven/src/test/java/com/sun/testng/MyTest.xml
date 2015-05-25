@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--
+suite : 由一个或多个测试组成
+Test: 由一个或多个类组成
+Class:由一个或多个方法组成
+-->
+
+<suite name="jmsSuite">
+    <test name="jmsTest">
+        <classes>
+            <class name="com.sun.testng.MyTest"/>
+        </classes>
+    </test>
+</suite>
